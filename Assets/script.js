@@ -10,6 +10,7 @@ let displayScore = document.querySelector("#display-score")
 let listScore = document.querySelector("#score-list")
 let resetScore = document.querySelector("#reset-scores")
 let scored =document.querySelector("#scoring")
+let startover = document.querySelector('#start-over')
 let listAnswer = [];
 var press = "";
 var indexpos = 0;
@@ -108,9 +109,13 @@ function scoreSubmit(){
 
     localStorage.setItem('scoreBoard',JSON.stringify(scoreBoard))
     
-    location.reload()
+    location.reload();
 
     
+}
+
+function restart(){
+    location.reload();
 }
 
 // Cycles question when called
@@ -152,7 +157,7 @@ function CycleAnswers (choice){
         
         
       if (data !== plus1) { 
-        time = time-5;
+        time = time-10;
         cycleQuestions();         
       }
       else{
@@ -180,7 +185,7 @@ function clearStorage(){
     location.reload();
 }
 
-
+startover.addEventListener("click",restart)
 // button to submit high score
 submitbtn.addEventListener("click",scoreSubmit)
 // button to start quiz
