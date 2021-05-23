@@ -12,7 +12,7 @@ body {
 	margin: 15px;
 }
 
-#buttons {
+li {
 	list-style: none;
 	margin: 10px;
 	width: 500px;
@@ -24,7 +24,23 @@ body {
 	border-radius: 5px;
 }
 
+#Button-list {
+	display: flex;
+	flex-direction: column;
+}
+
 #rules {
 	font-size: large;
 	margin: 30px;
+}
+
+#submitScore {
+	display: none;
+}
+
+#scoring {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

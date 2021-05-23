@@ -10,18 +10,24 @@
 	</head>
 	<body>
 		<h1 id="quiz">Welcome to the quiz.</h1>
-
-		<ul id="Button-list">
-			<li id="buttons">
-				<input
-					class="answer-button"
-					id="button1"
-					type="button"
-					value="Start Quiz"
-				/>
-			</li>
-		</ul>
-		<p id="rules">there are 10 questions and you will 1 minute to complete</p>
+		<input
+			class="answer-button"
+			id="button1"
+			type="button"
+			value="Start Quiz"
+		/>
+		<div id="Button-list"></div>
+		<h3 id="rules">there are 10 questions and you will 1 minute to complete</h3>
+		<h2 id="timeLeft"></h2>
+		<div id="submitScore">
+			<input type="text" id="initials" maxlength="3" />
+			<input type="button" value="Submit Score" id="subScore" />
+		</div>
+		<div id="scoring">
+			<ul id="score-list"></ul>
+			<input type="button" value="High Scores" id="display-score" />
+			<input type="button" value="Reset Scores" id="reset-scores" />
+		</div>
 	</body>
 	<script src="./Assets/script.js"></script>
 </html>
