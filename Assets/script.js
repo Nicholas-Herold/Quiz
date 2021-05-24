@@ -45,6 +45,36 @@ var questionAnswers = [
         choices: ["time","main","article","div"],
         correct: "div",
     },
+    {
+        question: 'When a user views a page containing a JavaScript program, which machine actually executes the script?',
+        choices: ["Web Server","Internet","Users Machine","None of the above"],
+        correct: "Users Machine",
+    },
+    {
+        question: 'Inside which element do you put JavaScript?',
+        choices: ["var","script","section","code"],
+        correct: "script",
+    },
+    {
+        question: 'How do you declare variable in JavaScript?',
+        choices: ["let","var","const","all of the above"],
+        correct: "all of the above",
+    },
+    {
+        question: 'What does DOM stand for?',
+        choices: ["Document of Machine","Document Object Model","Div Object Model","Many Objects Machine"],
+        correct: "Document Object Model",
+    },
+    {
+        question: 'What can functions be used for?',
+        choices: ["declaration,expression","alert,response","json,calls","None of the above"],
+        correct: "declaration,expression",
+    },
+    {
+        question: 'What one of these is datatypes ?',
+        choices: ["time","numbers","article","events"],
+        correct: "numbers",
+    },
 ] 
 
 // Start quiz and rest variables
@@ -61,7 +91,8 @@ stime= setInterval(startTimer,1000)
 
 // Timer function
 function startTimer(){
-    if(time === 0){
+    if(time <= 0){
+        time = 0;
         Timerend();
         GameOver();
     }
